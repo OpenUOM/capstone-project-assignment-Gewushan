@@ -55,7 +55,7 @@ const addTeacher = async (id, name, age) => {
     return new Promise((resolve, reject) => {
         knex_db
             .raw(sql, [id, name, age])
-            .then((data) => {
+            .then(() => {
                 resolve({status: "Successfully inserted Teacher"});
             })
             .catch((error) => {
@@ -69,7 +69,7 @@ const updateTeacher = async (name, age, id) => {
     return new Promise((resolve, reject) => {
         knex_db
             .raw(sql, [name, age, id])
-            .then((data) => {
+            .then(() => {
                 resolve({status: "Successfully updated Teacher"});
             })
             .catch((error) => {
@@ -83,7 +83,7 @@ const deleteTeacher = async (id) => {
     return new Promise((resolve, reject) => {
         knex_db
             .raw(sql, [id])
-            .then((data) => {
+            .then(() => {
                 resolve({status: "Successfully deleted Teacher"});
             })
             .catch((error) => {
@@ -125,7 +125,7 @@ const addStudent = async (id, name, age, hometown) => {
     return new Promise((resolve, reject) => {
         knex_db
             .raw(sql, [id, name, age, hometown])
-            .then((data) => {
+            .then(() => {
                 resolve({status: "Successfully inserted Student"});
             })
             .catch((error) => {
@@ -139,7 +139,7 @@ const updateStudent = async (name, age, hometown, id) => {
     return new Promise((resolve, reject) => {
         knex_db
             .raw(sql, [name, age, hometown, id])
-            .then((data) => {
+            .then(() => {
                 resolve({status: "Successfully updated Student"});
             })
             .catch((error) => {
@@ -153,7 +153,7 @@ const deleteStudent = async (id) => {
     return new Promise((resolve, reject) => {
         knex_db
             .raw(sql, [id])
-            .then((data) => {
+            .then(() => {
                 resolve({status: "Successfully deleted Student"});
             })
             .catch((error) => {
